@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Navbar from "./component/Navbar/Navbar";
+import Form from "./component/form/Form";
+import { Routes, Route } from "react-router-dom";
+import Show from "./component/Show/Show";
 
 function App() {
+  const [ cartItems, setCartItems] = useState([]);
+   console.log('cartItems', cartItems)
+
+  const addToCart1 = (item, quantity = 1) => {
+    const updatedItem = Array(quantity).fill(item);
+    setCartItems([...cartItems, ...updatedItem]);
+  };
+
+ 
+  
+  
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar cartCount={cartItems.length} showItem={cartItems} />
+      <Routes>
+        <Route exact path="/show" element={<Show addToCart1={addToCart1} />}></Route>
+        <Route exact path="/" element={<Form />}></Route>
+      </Routes>
     </div>
   );
 }

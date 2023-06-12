@@ -1,0 +1,14 @@
+.cover{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: azure;
+    padding: 1rem;
+}
+button {
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    padding: 3px;
+}

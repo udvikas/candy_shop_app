@@ -1,0 +1,23 @@
+.show1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+    font-weight: 600;
+    background-color: antiquewhite;
+}
+h3{
+    text-align: center;
+}
+.btn button{
+    margin-left: 5px;
+    background-color: cyan;
+    border: 0px;
+}
+.addData{
+    background-color: aqua;
+    padding: 8px;
+    border: 1px solid silver;
+    margin-left: 1rem;
+}
