@@ -28,7 +28,7 @@ function Navbar({ cartCount,showItem }) {
         <span style={{ color: "yellow", fontWeight: "bold" }}>{cartCount}</span>
       </button>
     </div>
-    <Modal  isOpen={isModalOpen} onRequestClose={closeModal}>
+    <Modal isOpen={isModalOpen} onRequestClose={closeModal}>
       <ModalContent showItem={showItem} closeModal={closeModal} />
     </Modal>
     </>

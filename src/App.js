@@ -6,18 +6,13 @@ import Show from "./component/Show/Show";
 
 function App() {
   const [ cartItems, setCartItems] = useState([]);
-   console.log('cartItems', cartItems)
 
   const addToCart1 = (item, quantity = 1) => {
     const updatedItem = Array(quantity).fill(item);
     setCartItems([...cartItems, ...updatedItem]);
   };
 
- 
   
-  
-  
-
   return (
     <div>
       <Navbar cartCount={cartItems.length} showItem={cartItems} />
